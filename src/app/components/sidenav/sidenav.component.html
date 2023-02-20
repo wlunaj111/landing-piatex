@@ -1,0 +1,70 @@
+<mat-toolbar style="background-color: #0F172A; color: #8B9AAF;">
+    <button (click)="drawer.toggle()" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+     <mat-icon>menu</mat-icon>
+   </button>
+   <span class="example-spacer"></span>
+
+  <button mat-icon-button [matMenuTriggerFor]="beforeMenu">
+    <!-- <mat-icon>person</mat-icon> -->
+    <mat-icon>account_circle</mat-icon>
+  </button>
+    <mat-menu #beforeMenu="matMenu" xPosition="before">
+        <button mat-menu-item>
+            <mat-icon>person</mat-icon>
+            <span>Mi cuenta</span>
+        </button>
+        <button mat-menu-item>
+            <mat-icon>exit_to_app</mat-icon>
+            <span>Cerrar sesión</span>
+        </button>
+    </mat-menu>
+   <!-- <span>My App</span> -->
+ 
+  
+ 
+   <!-- <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+     <mat-icon>favorite</mat-icon>
+   </button> -->
+   <!-- <div class="example-button-row"> 
+    <button mat-stroked-button color="success" routerLink="/login">Iniciar Sesión</button>
+  </div> -->
+<!-- 
+   <button (click)="onSetTheme()"mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+    <mat-icon>format_color_fill</mat-icon>
+  </button> -->
+ 
+ </mat-toolbar>
+ 
+ 
+   <mat-drawer-container class="example-container" [hasBackdrop]="false">
+     <!-- <mat-drawer #drawer mode="side" style="background-color: #293445; color: #8B9AAF;"> -->
+     <mat-drawer #drawer mode="side">
+       <mat-list>
+         <mat-list-item>Item 1</mat-list-item>
+         <mat-divider></mat-divider>
+         <mat-list-item>Item 2</mat-list-item>
+         <mat-divider></mat-divider>
+         <mat-list-item>Item 3</mat-list-item>
+       </mat-list>
+     </mat-drawer>
+     <mat-drawer-content>
+
+
+
+      <!-- <section>
+        <div class="example-label">Basic</div>
+        <div class="example-button-row">
+          <button mat-button>Basic</button>
+          <button mat-button color="primary">Primary</button>
+          <button mat-button color="accent">Accent</button>
+          <button mat-button color="warn">Warn</button>
+          <button mat-button disabled>Disabled</button>
+          <a mat-button href="https://www.google.com/" target="_blank">Link</a>
+        </div>
+      </section>
+      <mat-divider></mat-divider> -->
+      
+      
+
+     </mat-drawer-content>
+   </mat-drawer-container>
