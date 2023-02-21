@@ -18,7 +18,18 @@ $landing-piatex-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
 // The warn palette is optional (defaults to red).
 $landing-piatex-warn: mat.define-palette(mat.$red-palette);
 
-// Create the theme object. A theme consists of configurations for individual
+
+//Agregando modo oscuro en angular material-----------------------
+//$pmando-primary-dark: mat.define-palette(mat.$green-palette, A200);
+$landing-primary-dark: mat.define-palette(mat.$blue-palette, A200);
+$landing-accent-dark:  mat.define-palette(mat.$purple-palette, A700);
+$landing-warn-dark:  mat.define-palette(mat.$red-palette, A400);
+//-----------------------------------------------------------------
+
+
+
+
+// Create the theme object. A the me consists of configurations for individual
 // theming systems such as "color" or "typography".
 $landing-piatex-theme: mat.define-light-theme((
   color: (
@@ -28,10 +39,21 @@ $landing-piatex-theme: mat.define-light-theme((
   )
 ));
 
+
+//------------------------------------------------------------------------
+$landing-theme-dark: mat.define-dark-theme((
+  color: (
+    primary: $landing-primary-dark,
+    accent: $landing-accent-dark,
+    warn: $landing-warn-dark,
+  )
+));
+//-------------------------------------------------------------------------
+
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
-@include mat.all-component-themes($landing-piatex-theme);
+@include mat.all-component-themes($landing-theme-dark);
 
 /* You can add global styles to this file, and also import other style files */
 

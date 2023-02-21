@@ -23,11 +23,10 @@ const routes: Routes = [
         //canActivate: [AuthGuard],
         //data: {permiso: ['view_dashboard']}
       },
-      {
-         path: 'project',
-         loadChildren: () => import('./modules/admin/dashboard/project/project.module').then(m => m.ProjectModule),
-         //canActivate: [AuthGuard],
-         //data: {permiso: ['view_advertiser']},      
+      { path: 'campanna',
+        loadChildren: () => import('./modules/admin/campanna/campanna.module').then(m => m.CampannaModule)
+        //canActivate: [AuthGuard],
+        //data: {permiso: ['sales_payment']},
       },
       // {
       //   path: 'sales',
@@ -40,6 +39,7 @@ const routes: Routes = [
   },
 
   { path: 'landing', loadChildren: () => import('./modules/landing/landing.module').then(m => m.LandingModule) },
+  // { path: 'campanna', loadChildren: () => import('./modules/admin/campanna/campanna.module').then(m => m.CampannaModule) },
   //{ path: 'project', loadChildren: () => import('./modules/admin/dashboard/project/project.module').then(m => m.ProjectModule) },
   { path: '**', redirectTo: 'landing'},
 ];

@@ -9,8 +9,6 @@ export class SidenavComponent implements OnInit{
 
   panelOpenState = false;
 
-  e = "ligth-theme";
-
   ngOnInit(): void {
   }
 
