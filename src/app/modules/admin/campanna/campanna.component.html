@@ -3,48 +3,95 @@
     <div *ngSwitchCase="'vertical'">Make your screen larger to see a horizontal stepper</div>
   </ng-container> -->
   <div>
-    <h2>¿Cuál es el objetivo de tu campaña?</h2>
+    <h2>Nueva campaña</h2>
   </div>
   
     <mat-stepper
     class="example-stepper"
     [orientation]="(stepperOrientation | async)!">
-    <mat-step [stepControl]="firstFormGroup" label="Fill out your name">
-      <form [formGroup]="firstFormGroup">
-        <mat-form-field appearance="fill">
-          <mat-label  >Name</mat-label>
-          <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
-        </mat-form-field>
+    <mat-step [stepControl]="firstFormGroup" label="Objetivo">
+      <!-- <form [formGroup]="firstFormGroup"> -->
+        <!-- <mat-form-field appearance="fill"> -->
+
+          <label id="example-radio-group-label"><h3>Seleccione un objetivo para adaptar tu experiencia a los objetivos y la configuración que mejor funcionen para tu campaña</h3></label>
+          <mat-radio-group aria-labelledby="example-radio-group-label" class="example-radio-group" [(ngModel)]="favoriteSeason">
+          <mat-radio-button class="example-radio-button" *ngFor="let season of seasons" [value]="season">
+          {{season}}
+          </mat-radio-button>
+          </mat-radio-group>
+         
+          <!-- <mat-label  >Name</mat-label>
+          <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required> -->
+        <!-- </mat-form-field> -->
+
+
         <div>
-          <button mat-button matStepperNext>Next</button>
+          <button mat-button matStepperNext>Siguiente</button>
         </div>
-      </form>
+      <!-- </form> -->
     </mat-step>
-    <mat-step [stepControl]="secondFormGroup" label="Fill out your address">
-      <form [formGroup]="secondFormGroup">
-        <mat-form-field appearance="fill">
-          <mat-label>Address</mat-label>
-          <input matInput  formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY"
-                 required>
-        </mat-form-field>
+    <mat-step [stepControl]="secondFormGroup" label="Tipo de campaña">
+
+      <label id="example-radio-group-label"><h3>Seleccione el tipo de campaña</h3></label>
+      <mat-radio-group aria-labelledby="example-radio-group-label" class="example-radio-group" [(ngModel)]="selectTipo">
+      <mat-radio-button class="example-radio-button" *ngFor="let tipo of tiposCampannas" [value]="tipo">
+      {{tipo}}
+      </mat-radio-button>
+      </mat-radio-group>
         <div>
-          <button mat-button matStepperPrevious>Back</button>
-          <button mat-button matStepperNext>Next</button>
+          <button mat-button matStepperPrevious>Regresar</button>
+          <button mat-button matStepperNext>Siguiente</button>
         </div>
-      </form>
+
     </mat-step>
-    <mat-step [stepControl]="thirdFormGroup" label="Fill out your phone number">
+    <mat-step [stepControl]="thirdFormGroup" label="Nombre de la campaña">
+
+      <label id="example-radio-group-label"><h3>Defina un nombre para la nueva campaña</h3></label>
       <form [formGroup]="thirdFormGroup">
-        <mat-form-field appearance="fill">
-          <mat-label>Phone number</mat-label>
-          <input matInput formControlName="thirdCtrl" placeholder="Ex. 12345678" required>
+        <mat-form-field appearance="outline">
+          <mat-label>nombre de campaña</mat-label>
+          <input matInput formControlName="thirdCtrl" required>
         </mat-form-field>
         <div>
-          <button mat-button matStepperPrevious>Back</button>
-          <button mat-button matStepperNext>Next</button>
+          <button mat-button matStepperPrevious>Regresar</button>
+          <button mat-button matStepperNext>Siguiente</button>
         </div>
       </form>
     </mat-step>
+    
+
+      <mat-step [stepControl]="fourFormGroup" label="Segmentación geográfica">
+        
+        <div class="flex-items">
+
+        <label id="example-radio-group-label"><h3>Segmentación geográfica</h3></label>
+      
+      
+          <mat-radio-group aria-labelledby="example-radio-group-label" class="segmentacion-radio-group" [(ngModel)]="selectSegmentacion" >
+            <mat-radio-button class="example-radio-button" *ngFor="let tipo of tiposSegmentacion" [value]="tipo">
+            {{tipo}}
+            </mat-radio-button>
+            </mat-radio-group>
+    
+            <mat-form-field appearance="outline">
+              <mat-label>Provincia</mat-label>
+              <mat-select [formControl]="toppings" multiple>
+                <mat-option *ngFor="let topping of toppingList" [value]="topping">{{topping}}</mat-option>
+              </mat-select>
+            </mat-form-field>
+        </div>
+        
+        
+        <!-- <p>You selected: {{selected}}</p> -->
+
+        <div>
+          <button mat-button matStepperPrevious>Regresar</button>
+          <button mat-button matStepperNext>Siguiente</button>
+        </div>
+     
+    </mat-step>
+
+
     <mat-step>
       <ng-template matStepLabel>Done</ng-template>
       <p>You are now done.</p>

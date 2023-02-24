@@ -2,6 +2,9 @@
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
 @use '@angular/material' as mat;
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
 // Plus imports for other components in your app.
 
 // Include the common styles for Angular Material. We include this here so that you only
@@ -58,4 +61,77 @@ $landing-theme-dark: mat.define-dark-theme((
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body {
+   margin: 0;
+   font-family: Fira Sans, sans-serif;
+  }
+
+  // mat-form-field-wrapper {
+  //   @apply pb-2.5;
+  // }
+  
+  // .responsive-section {
+  //   @apply flex flex-col md:flex-row items-center md:space-x-4;
+  // }
+  
+  // .mat-raised-button.admin-button {
+  //   min-width: 70px !important;
+  // }
+  
+  // .mat-error, .mat-form-field-label {
+  //   font-size: 13px !important;
+  // }
+  
+  // .mat-list-item-content {
+  //   display: flex;
+  //   align-items: center;
+  
+  //   & p {
+  //     margin-bottom: 0px !important;
+  //   }
+  // }
+  
+  // mat-form-field.mat-form-field-should-float label {
+  //   font-size: 18px !important;
+  // }
+  
+  // mat-form-field label {
+  //   font-size: 20px;
+  //   //background-color: #f5f9f9;
+  //   width: auto !important;
+  //   padding-right: .5rem !important;
+  // }
+  
+  // .mat-row:hover {
+  //   //background-color: #cccccc;
+  // }
+  
+  // mat-sidenav .mat-drawer-inner-container {
+  //   overflow: hidden !important;
+  // }
+  
+  // #player {
+  //   & [data-player] {
+  //     & .play-wrapper {
+  //       display: flex !important;
+  //       justify-content: center;
+  //       align-items: center;
+  //     }
+  //   }
+  // }
+  // .custom-btn-grp {
+  //   & .mat-button-toggle{
+  //     //background: rgba(black, .3);
+  //     & mat-icon {
+  //       @apply text-gray-400;
+  //     }
+  //     &-checked {
+  //       //background: rgba(white, .1);
+  
+  //       & mat-icon {
+  //         @apply text-blue-600;
+  //       }
+  
+  //     }
+  //   }
+  // }

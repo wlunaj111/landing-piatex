@@ -28,3 +28,26 @@ mat-stepper {
     font-size: 24px;
     margin-top: 0;
   }
+
+  .example-radio-group {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0;
+    align-items: flex-start;
+  }
+  .segmentacion-radio-group {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0;
+    align-items: flex-start;
+  }
+  
+  .example-radio-button {
+    margin: 5px;
+  }
+  .flex-items {
+    display: flex;
+    flex-direction: column;
+    margin: 3px solid red;
+    align-items: flex-start;
+  }

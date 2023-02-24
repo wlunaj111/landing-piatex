@@ -52,16 +52,38 @@
         <mat-icon>dashboard</mat-icon> Dashboard
       </a>
       <a
+      mat-list-item
+      routerLinkActive="list-item-active"
+      routerLink="/gestioncampanna"
+    >
+      <mat-icon>date_range</mat-icon> Gestionar Campañas
+    </a>
+      <a
         mat-list-item
         routerLinkActive="list-item-active"
         routerLink="/campanna"
       >
-        <mat-icon>video_settings</mat-icon> Campaña
+        <mat-icon>video_settings</mat-icon> Crear Nueva Campaña
       </a>
-      <a mat-list-item routerLink="/home"> <mat-icon>edit</mat-icon> Link 3 </a>
-      <a mat-list-item> <mat-icon>edit</mat-icon> Link 4 </a>
+      <a
+        mat-list-item
+        routerLinkActive="list-item-active"
+        routerLink="/gestionanuncio"
+      >
+        <mat-icon>important_devices</mat-icon> Gestionar Anuncios
+      </a>
+      <a
+        mat-list-item
+        routerLinkActive="list-item-active"
+        routerLink="/anuncio"
+      >
+        <mat-icon>create</mat-icon> Crear Anuncio
+      </a>
+    
+      <!-- <a mat-list-item routerLink="/home"> <mat-icon>edit</mat-icon> Link 3 </a> -->
+      <!-- <a mat-list-item> <mat-icon>edit</mat-icon> Link 4 </a>
       <a mat-list-item> <mat-icon>edit</mat-icon> Link 5 </a>
-      <a mat-list-item> <mat-icon>edit</mat-icon> Link 6 </a>
+      <a mat-list-item> <mat-icon>edit</mat-icon> Link 6 </a> -->
     </mat-nav-list>
   </mat-drawer>
   <mat-drawer-content>

@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { CampannaRoutingModule } from './campanna-routing.module';
-import { CampannaComponent } from './campanna.component';
+import { AnuncioRoutingModule } from './anuncio-routing.module';
+import { AnuncioComponent } from './anuncio.component';
+import { GestionanuncioComponent } from './gestionanuncio/gestionanuncio.component';
 
 import { MatStepperModule } from '@angular/material/stepper';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -13,22 +14,18 @@ import { MatRadioModule } from '@angular/material/radio';
 import { FormsModule } from '@angular/forms';
 import { MatCardModule } from '@angular/material/card'
 import { MatSelectModule } from '@angular/material/select';
-import { GestioncampannaComponent } from './gestioncampanna/gestioncampanna.component';
-//import { MatDividerModule } from '@angular/material/divider';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator'; 
 
 
-
-
 @NgModule({
   declarations: [
-    CampannaComponent,
-    GestioncampannaComponent,
+    AnuncioComponent,
+    GestionanuncioComponent
   ],
   imports: [
     CommonModule,
-    CampannaRoutingModule,
+    AnuncioRoutingModule,
     MatStepperModule,
     MatFormFieldModule,
     ReactiveFormsModule,
@@ -40,9 +37,6 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     MatSelectModule,
     MatTableModule,
     MatPaginatorModule
-    //MatDividerModule
-    
-    
   ]
 })
-export class CampannaModule { }
+export class AnuncioModule { }

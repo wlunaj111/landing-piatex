@@ -16,6 +16,9 @@ import { UserModel } from 'src/app/core/auth/models/user';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit, OnDestroy {
+
+  dropdownLogin = false;
+  showPass = false;
   
   durationInSeconds = 3;
   loginForm!: FormGroup;
@@ -91,6 +94,13 @@ ngOnInit(): void {
 
   ngOnDestroy(): void {
     this.subs.unsubscribe();
+  }
+
+
+  toggleVisibility(evt:any) {
+    evt.preventDefault();
+    evt.stopPropagation();
+    this.showPass = !this.showPass;
   }
 
 

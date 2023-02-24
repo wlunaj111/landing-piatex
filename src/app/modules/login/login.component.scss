@@ -1,22 +1,65 @@
-.login-form {
-    padding: 4rem 1rem;
-  
-    mat-card {
-      max-width: 300px;
-      margin: 2rem auto;
-      text-align: center;
-      height: 350px;
-    }
-  
-    .full-width-input,
-    button {
-      width: 100%;
-    }
-  
-    .separator {
-      margin-bottom: 2rem;
-    }
-  
+:host {
+  display: grid;
+  place-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #05071F;
 
+  & form {
+    display: flex;
+    flex-direction: column;
   }
-  
+}
+
+.login-container {
+  position: relative;
+  max-width: 940px;
+  min-width: 340px;
+
+  & .progress-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+  }
+
+  ::ng-deep mat-icon {
+    color: white;
+  }
+
+  // ::ng-deep  .mat-form-field-outline {
+  //   color: white;
+  // }
+
+  // ::ng-deep mat-form-field label {
+  //   font-size: 20px;
+  //   letter-spacing: 1.5px;
+  //   color: white;
+  //   background-color: #05071F !important;
+  //   width: auto !important;
+  //   padding-right: .5rem !important;
+  // }
+  // ::ng-deep .mat-flat-button.mat-warn, .mat-raised-button.mat-warn, .mat-fab.mat-warn, .mat-mini-fab.mat-warn {
+  //   background-color: #006414;
+  // }
+
+  // ::ng-deep .mat-checkbox-frame {
+  //   background-color: lightblue;
+  // }
+  // ::ng-deep .mat-error {
+  // margin: 3px;
+  // margin-left: 0px;
+  // }
+
+
+  h1 {
+    color: white;
+  }
+  // .losed-password {
+  //   color: #611406;
+  //   margin-top: 8px;
+  //   margin-left: 62px;
+  // }
+
+} 
